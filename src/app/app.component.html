@@ -1,9 +1,16 @@
-<ul>
-  <li>
-    <a routerLink="/">Home</a>
-  </li>
-  <li>
-    <a routerLink="/about">About Us</a>
-  </li>
-</ul>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Third Line</span>
+    <span class="toolbar-head-spacer"></span>
+    <div class="toolbar-head-button-row">
+      <a routerLink="/" mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </a>
+      <a routerLink="/about" mat-button>
+        <mat-icon>explore</mat-icon>
+        About Us
+      </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>

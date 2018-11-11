@@ -8,6 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { DataService } from './services/data.service';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+
 import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 
@@ -38,7 +41,9 @@ const routes: Route[] = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     DataService
