@@ -1,0 +1,23 @@
+<mat-card class="mat-elevation-z8">
+  <form #productForm="ngForm" (ngSubmit)="sendProduct(productForm)">
+    <mat-card-content class="form-wrapper">
+        <mat-form-field>
+          <input matInput placeholder="Add a name" name="name" #name="ngModel" [(ngModel)]="productService.selectedProduct.name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Add a category" name="category" #category="ngModel" [(ngModel)]="productService.selectedProduct.category">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Add a location" name="location" #location="ngModel" [(ngModel)]="productService.selectedProduct.location">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Add a price" name="price" #price="ngModel" [(ngModel)]="productService.selectedProduct.price">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="submit">Save</button>
+      <button mat-button type="reset" (click)="resetForm(productForm)">Reset</button>
+    </mat-card-actions>
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key">
+  </form>
+</mat-card>

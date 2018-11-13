@@ -1,0 +1,22 @@
+.products-list-wrapper {
+    width: 100%;
+
+    th { 
+        &.mat-column-actions {
+            text-align: center;
+        }
+    }
+    td { 
+        &.mat-column-actions {
+            width: 96px;
+            padding-right: 8px;
+        }
+    }
+
+    .actions-button-row {
+        button,
+        a {
+            margin-right: 8px;
+        }
+    }
+}
