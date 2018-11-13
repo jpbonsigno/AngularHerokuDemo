@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class ProductComponent implements OnInit {
   
-  constructor(private productService: ProductService, public snackBar: MatSnackBar) { }
+  constructor(public productService: ProductService, public snackBar: MatSnackBar) { }
 
   resetForm(productForm?: NgForm){
     if (productForm != null) {
